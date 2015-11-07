@@ -1,0 +1,331 @@
+@CHARSET "ISO-8859-1";
+body, html {
+	height: 100%;	
+}
+
+body {
+	display: block;
+}
+
+
+#outer {
+	width: 100%;
+	height: 100%;
+	
+}
+
+#inner {
+	height: 132px;
+	width: 100%;
+	background-color:#F5F5F5 ;
+
+}
+#top {
+	width: 100%;
+	height: 40px;
+	background-color: ;
+}
+
+#toplist li {
+	list-style-type: none;
+	display: inline;
+	font-size: 12px;
+	text-decoration: none;
+	font-family: cursive; fantasy; serif;
+}
+
+#header {
+	width: 100%;
+	height: 70px;
+	background-color:  ;
+	border-bottom: groove;
+
+}
+
+#shoppingKart {
+	width: 160px;
+	height: 92px;
+	background-color: ;
+	display: inline-block;
+	background-color: ;
+	float: right;
+	margin-right: ;
+
+}
+
+#thecart {
+	width: 390px;
+	height: 92px;
+	background-color: ;
+	display: inline-block;
+	background-color: ;
+	float: right;
+	position: relative;
+}
+#general {
+	width: 50%;
+	height: 29px;
+	background-color: ;
+	display: inline-block;
+	float: left;
+}
+
+#phonenum {
+	width: 50%;
+	height: 40px;
+	background-color: ;
+	float: right;
+	display: inline-block;
+	}
+
+	#phonenum img {
+		margin-top: 10px;
+	}
+
+#thenumber {
+	width: 35%;
+	height: 40px;	
+	display: inline-block;
+	}
+
+	#socialsciete {
+	width: 28%;
+	height: 40px;
+	
+	clear: both;
+	display: inline-block;
+	}
+
+#account {
+	width: 30%;
+	height: 40px;
+	margin-bottom: 20px;
+	float: left;
+	display: inline-block;
+	
+}
+
+#account li {
+	display: inline;
+	text-decoration: none;
+}
+
+#categories {
+	width: 50%;
+	height: 92px;
+	background-color: ;
+	position: absolute;
+	display: inline-block;
+	
+}
+
+#toplist a:hover, #account a:hover {
+	color: #1E90FF;
+	}
+
+#inner a:hover {
+	color: black;
+}
+
+ #inner  a:clicked {
+	color: black;
+}
+
+#inner a {
+	text-decoration: none;
+} 
+
+
+  #top li:before , #foooterBar li:before {
+  content: " | ";
+}
+
+  #top li:first-child:before, #foooterBar li:first-child:before {
+  content: "";
+}
+
+#categories li:before {
+  content: "";
+}
+
+#productlist {
+	margin: 25px 0 25px 0;	
+	position: relative;
+	border: none;
+	float: left;
+	border-collapse: separate;
+}
+
+#superwraper {
+	position: absolute;
+	z-index: 999;
+	padding: 16px 0;
+	margin-bottom: 39px 0 0;
+	border: none;
+}
+
+#textarea {
+	width: 180px;
+	height: 40px;
+	
+	
+	display: inline-block;
+	margin-top: 30px;
+}
+
+#carttext {
+	width: 80px;
+	height: 60px;
+
+	
+	float: right;
+	display: inline-block;
+	margin-top: 20px;
+}
+
+#select {
+	width: 120px;
+	height: 40px;
+
+	background-color:  ;
+	float: left;
+	display: inline-block;
+	margin-top: 30px;
+}
+
+#search {
+
+	border-radius: 5%;
+}
+
+.list {
+	display: inline-block;
+	clear: both;
+	background-color: ;
+}
+
+#leftsidebar {
+	width: 22.5%;
+	height:821px;
+	float: left;
+	display: inline-block;
+	background-color: ;
+}
+
+#rightsidebar {
+	width: 17.5%;
+	height:821px;
+	float: right;
+	display: inline-block;
+	background-color: ;
+	 
+}
+
+#productlist div {
+
+	border-radius: 5px;
+    background-color: #ABCDEF;
+    transition: background-color 0.5s ease;
+    display:inline-block;
+    font-size:25px;
+   
+    border:1px solid #ccc;   
+}
+
+.hovering {
+    background-color:#00BFFF;
+}
+
+#foooterBar {
+	background-color:rgb(255,100,100);
+    padding:10px 0;
+	width: 100%;
+	height:120px;
+	float:right;
+	display: inline-block;
+}
+
+#foooterBar ul {
+	text-align: center;
+}
+
+#foooterBar li {
+	text-align: center;
+	list-style-type: none;
+	display: inline;
+}
+
+#header li {
+
+	list-style-type: none;
+	display: inline;
+	
+	font-size: 16px;
+	text-decoration: none;
+	position: relative;
+	font-family: cursive; fantasy; serif;
+
+}
+
+#header {
+    background-color:rgb(255,100,100);
+    padding:10px 0;
+}
+#header ul {
+    list-style-type:none;
+    margin:0;
+    padding:0;
+}
+#header ul li {
+    display:inline-block;
+    position:relative;
+}
+
+#header li ul {    
+    background-color:rgb(225,75,75);
+    position:absolute;
+    left:0;
+    top:40px; /* make this equal to the line-height of the links (specified below) */
+    width:200px;
+}
+#header li li {
+    position:relative;
+    margin:0;
+    display:block;
+}
+#header li li ul {
+    position:absolute;
+    top:0;
+    left:200px; /* make this equal to the width of the sub nav above */
+    margin:0;
+}
+
+#header a {
+    line-height:40px;
+    padding:0 12px;
+    margin:0 12px;
+}
+#header a {
+    color:#fff;
+    text-decoration:none;
+    display:block;
+}
+#header a:hover,
+#header a:focus,
+#header a:active {
+    color:rgb(50,50,50);
+}
+
+/* style sub level links */
+#header li li a {
+    border-bottom:solid 1px rgb(200,50,50);
+    margin:0 10px;
+    padding:0;
+}
+#header li li:last-child a {
+    border-bottom:none;
+}
+
+ul.sub-menu {
+    display:none;
+}

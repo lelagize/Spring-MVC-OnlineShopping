@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+   "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+   "http://struts.apache.org/dtds/struts-2.0.dtd">
+   <struts>
+   		
+   		<constant name="struts.action.extension" value="html"></constant>
+   		<constant name="struts.devMode" value="false" />
+   		<package name="login" extends="struts-default">
+   			<action name="login" class="main.StrutsAction.LogInAction">
+   				<result name="success">/search.jsp</result>
+   				<result name="error">/error.jsp</result>
+   				<result name="input">/login.jsp</result>
+   			</action>
+   			
+   		</package>
+   		   	
+   		<package name="ecommerce" extends="struts-default">
+   			<action name="customerName" class="main.StrutsAction.CustomerAction">
+   				<result name="success">/success.jsp</result>
+   			</action>
+   		</package>
+   		
+   		<package name="productList" extends="struts-default">
+   			<action name="listOfProducts" class="main.StrutsAction.ProductAction">
+   				<result name="success">/success.jsp</result>
+   				<result name="error">/error.jsp</result>   				
+   			</action>
+   			
+   		
+   		</package>
+   		
+   		<package name="productdetail" extends="struts-default">
+   			<action name="detail" class="main.StrutsAction.SingleProductAction">
+   			
+   				<result name="success">/detail.jsp</result>
+   				<result name="error">/error.jsp</result>
+   				<result name="input">/error.jsp</result>
+   				
+   			</action>
+   			
+   			<action name="addtocart" class="main.StrutsAction.ShoppingCartController" >
+   				<result name="success">/shoppingcart.jsp</result>
+   				<result name="error">/error.jsp</result>
+   				<result name="input">/error.jsp</result>
+   			</action>
+   			
+   			<action name="remove" class="main.StrutsAction.ShoppingCartController" >
+   				<result name="success">/welcome.jsp</result>
+   				<result name="error">/error.jsp</result>
+   				<result name="input">/error.jsp</result>
+   			</action>
+   			
+   		
+   			
+   			<action name="gobacktoShopping" class="main.StrutsAction.ProductAction">
+   				<result name="success">/success.jsp</result>
+   				<result name="error">/error.jsp</result>   		
+   			</action>
+   			
+   			<action name="account">
+   				<result>/loginorsignUp.jsp</result>
+   			</action>
+   			<action name="clickforsignup">
+   				<result>/signup.jsp</result>
+   			</action>
+   			
+   			<action name="signup" class="main.StrutsAction.SignUpAction" method="execute">
+   				<result name="success">/welcome.jsp</result>
+   				<result name="input">/search.jsp</result>
+   			</action>
+   			
+   			<action name="login" class="main.StrutsAction.LogInAction">
+   				<result name="success">/SignUpConformation.jsp</result>
+   				<result name="error">/error.jsp</result>
+   				<result name="input">/login.jsp</result>
+   			</action>
+   			
+   			<action name="viewShoppingKart">
+   				<result>/shoppingcart.jsp</result>
+   			</action>
+   			<action name="login">
+   				<result>/login.jsp</result>
+   			</action>
+   			
+   			<action name="signup">
+   				<result>/signup.jsp</result>
+   			</action>
+   			
+   			<action name="checkout">
+   				<result>/shoppingcart.jsp</result>
+   			</action>
+   		</package>
+   		
+   		<package name="secure-package" extends="struts-default">
+   		
+   			<interceptors>
+   				<interceptor name="authenticationInterceptor" class="com.tadtab.authentication.AuthenticationInterceptor" />
+   				
+   				<interceptor-stack name="authentication">
+   					<interceptor-ref name="authenticationInterceptor"></interceptor-ref>
+   					<interceptor-ref name="defaultStack"></interceptor-ref>
+   				</interceptor-stack>
+   			</interceptors>
+   			
+   			<default-interceptor-ref name="authentication"></default-interceptor-ref>
+   			
+   			<global-results>
+   				<result name="input">/login.jsp</result>
+   				<result name="error">/error.jsp</result>
+   			</global-results>
+   			
+   			<action name="trySecureCheckout">
+   				<result>/secure.jsp</result>
+   			</action>
+   			
+   		</package>
+   		<package name="default" extends="struts-default">
+   			<global-results>
+   			 	<result name="nullp" >/nullPointer.jsp</result>
+   			</global-results>
+   			<global-exception-mappings>
+   				<exception-mapping result="nullp" exception="java.lang.NullPointerException">   					
+   				</exception-mapping>   				
+   			</global-exception-mappings>
+   			
+   		</package>
+   	
+   </struts>
